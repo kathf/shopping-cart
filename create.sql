@@ -1,15 +1,17 @@
 create table products (
   id serial primary key,
   name text,
-  price money,
-  gst_flag int
+  price_x_gst money,
+  gst money,
+  total_price money,
+  stock int
 );
 
 create table transactions (
   id serial primary key,
---#  amount money,
---# gst money,
---#  total money
+  amount_x_gst money,
+  amount_gst money,
+  total_amount money,
   purchase_date timestamp
 );
 
